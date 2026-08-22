@@ -1,30 +1,38 @@
 <div align="center">
 
+<img
+  src="assets/EndoXAI_Physical_to_Digital_Animated.gif"
+  alt="EndoXAI-RCT — From X-ray Machine to AI-Powered Review"
+  width="100%"
+/>
+
+</div>
+<div align="center">
+
 # 🦷 EndoXAI-RCT
 
 ## Explainable Multi-Model AI Architecture for Clinical Image Review
 
-### From panoramic radiographs to evidence-grounded, explainable and human-reviewed decision support
+### Panoramic X-ray → Multi-Model Evidence → XAI → Human Review
 
 <br/>
 
 <a href="https://endoxai-rct-459576379252.asia-south1.run.app/">
-  <img src="https://img.shields.io/badge/🚀_LAUNCH_LIVE_PLATFORM-GOOGLE_CLOUD_RUN-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" alt="Launch Live Platform"/>
+<img src="https://img.shields.io/badge/🚀_LIVE_DEMO-GOOGLE_CLOUD_RUN-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white"/>
 </a>
 
 <a href="https://huggingface.co/spaces/janicecodes/EndoXAI-RCT">
-  <img src="https://img.shields.io/badge/🤗_HUGGING_FACE-ENDOXAI--RCT-FFD21E?style=for-the-badge" alt="Hugging Face"/>
+<img src="https://img.shields.io/badge/🤗_HUGGING_FACE-ENDOXAI--RCT-FFD21E?style=for-the-badge"/>
 </a>
 
 <br/><br/>
 
-<img src="https://img.shields.io/badge/MULTI--MODEL-AI-7C3AED?style=flat-square" alt="Multi-Model AI"/>
-<img src="https://img.shields.io/badge/XAI-EXPLAINABLE_AI-EA4C89?style=flat-square" alt="Explainable AI"/>
-<img src="https://img.shields.io/badge/EVIDENCE-GROUNDED-00A67E?style=flat-square" alt="Evidence Grounded"/>
-<img src="https://img.shields.io/badge/HUMAN-GOVERNED-2563EB?style=flat-square" alt="Human Governed"/>
-<img src="https://img.shields.io/badge/DEPLOYMENT-GOOGLE_CLOUD_RUN-4285F4?style=flat-square&logo=googlecloud&logoColor=white" alt="Google Cloud Run"/>
-<img src="https://img.shields.io/badge/STATUS-RESEARCH_PROTOTYPE-F59E0B?style=flat-square" alt="Research Prototype"/>
+<img src="https://img.shields.io/badge/MULTI--MODEL-AI-7C3AED?style=flat-square"/>
+<img src="https://img.shields.io/badge/XAI-EXPLAINABLE_AI-EA4C89?style=flat-square"/>
+<img src="https://img.shields.io/badge/EVIDENCE-GROUNDED-00A67E?style=flat-square"/>
+<img src="https://img.shields.io/badge/HUMAN-GOVERNED-2563EB?style=flat-square"/>
 
+</div>
 <br/><br/>
 
 ### 🧠 Models explain · 🔎 Evidence supports · 🛡️ Architecture governs · 👩‍⚕️ Humans decide
