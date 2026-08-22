@@ -4,6 +4,7 @@
   src="assets/EndoXAI_Physical_to_Digital_Animated.gif"
   alt="EndoXAI-RCT — From X-ray Machine to AI-Powered Review"
   width="100%"
+  style="border-radius: 18px;"
 />
 
 </div>
