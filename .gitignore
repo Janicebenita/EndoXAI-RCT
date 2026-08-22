@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+server_uploads/*
+predictions/*
+!server_uploads/.gitkeep
+!predictions/.gitkeep
+
+# Large trained model artifacts
+resnet_lsl_model.pt
+*.pt

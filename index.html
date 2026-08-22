@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EndoXAI RCT Decision Support</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="dashboard">
+    <aside class="sidebar">
+      <img class="logo" src="/assets/endoxai-logo.png" alt="EndoXAI logo" onerror="this.style.display='none'" />
+      <div class="patient-card">
+        <span>Patient ID</span>
+        <strong id="caseId">Upload case</strong>
+        <span>Mode</span>
+        <strong>Model-backed review</strong>
+      </div>
+      <nav>
+        <button class="active">Analysis</button>
+        <button>Findings</button>
+        <button>Triage</button>
+        <button>Reports</button>
+      </nav>
+      <label class="upload-card">
+        <strong>Upload radiograph</strong>
+        <span>PAI model runs first. Support models are advisory.</span>
+        <input id="fileInput" type="file" accept="image/*" />
+      </label>
+      <div class="controls">
+        <span class="control-title">View</span>
+        <button data-view="original">Original</button>
+        <button data-view="box" class="active">Box</button>
+        <button data-view="gradcam">Grad-CAM</button>
+        <button data-view="both">Both</button>
+      </div>
+    </aside>
+
+    <section class="viewer-card">
+      <header>
+        <strong>Panoramic Radiograph</strong>
+        <span id="viewStatus">Ready</span>
+      </header>
+      <div class="image-stage">
+        <img id="mainImage" alt="Selected dental radiograph" />
+        <div id="emptyState">Upload a radiograph to run model-backed inference.</div>
+      </div>
+      <footer>
+        <span>Model: PAI 3/4/5 first</span>
+        <span id="xaiFooter">Grad-CAM disabled pending validation</span>
+      </footer>
+      <section class="viewer-explain">
+        <strong>Explainability</strong>
+        <ul id="explainList"></ul>
+      </section>
+    </section>
+
+    <aside class="results">
+      <section class="panel">
+        <div class="panel-title">
+          <strong>AI Findings</strong>
+        </div>
+        <ol id="findingsList"></ol>
+      </section>
+
+      <section class="panel triage">
+        <strong>RCT Triage Estimation</strong>
+        <div class="risk-row">
+          <div class="gauge"><span id="needle"></span></div>
+          <div>
+            <div id="riskPercent">--%</div>
+            <div id="riskLevel">Waiting</div>
+          </div>
+        </div>
+        <div class="risk-bar"><span id="riskBar"></span></div>
+      </section>
+
+      <section class="panel output">
+        <strong>Overall Output</strong>
+        <h2 id="outputStatus">REVIEW READY</h2>
+        <p id="outputMessage">Upload an image to start.</p>
+      </section>
+
+      <section class="panel model-card">
+        <strong>Prototype Model Card</strong>
+        <p>
+          EndoXAI uses a PAI 3/4/5 lesion detector as the primary decision model.
+          OPG and teeth-support models provide advisory findings only. Grad-CAM is
+          disabled until faithfulness testing confirms localization reliability.
+        </p>
+      </section>
+    </aside>
+  </main>
+  <script src="/app.js?v=no-confidence-display-20260718"></script>
+</body>
+</html>
