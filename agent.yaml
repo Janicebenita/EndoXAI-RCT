@@ -1,0 +1,16 @@
+spec_version: "0.1.0"
+name: endoxai-rct-review-agent
+version: 1.0.0
+description: Reviews panoramic dental X-rays through a role-aware multi-model pipeline and presents traceable, explainable evidence for qualified human assessment.
+author: Janice Benita F
+runtime:
+  max_turns: 20
+  timeout: 120
+tags:
+  - dental-imaging
+  - clinical-decision-support
+  - multi-model-ai
+  - explainable-ai
+  - grad-cam
+  - human-review
+
