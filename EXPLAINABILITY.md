@@ -35,3 +35,9 @@ A qualified human reviewer must examine the original image and supporting clinic
 Clinical images and metadata may contain sensitive health information and must be handled under applicable consent, access-control, retention, security, and privacy requirements. Production use would require validated models, representative evaluation, monitoring, audit trails, cybersecurity controls, documented governance, and regulatory assessment.
 
 The agent must not trigger treatment, create definitive clinical records, or communicate a diagnosis directly to a patient without authorized professional oversight. Users remain responsible for verifying identity, image quality, evidence relevance, clinical applicability, and all final decisions.
+
+## Implementation in This Repository
+
+`fastapi_app.py` exposes the repository's inference API, and `gradcam_resnet_lsl.py` implements the image-model and Grad-CAM explanation path used for reviewer inspection. The browser client in `app.js` submits images to that API and displays the returned prediction and visual evidence; the training scripts document how model artifacts are produced.
+
+The implementation is clinical decision support, not an autonomous diagnostic or treatment system. Its output must preserve model/version context and image-quality limitations, and a qualified clinician must inspect the original radiograph and explanation before acting.
