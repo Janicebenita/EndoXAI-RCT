@@ -38,6 +38,6 @@ The agent must not trigger treatment, create definitive clinical records, or com
 
 ## Implementation in This Repository
 
-`fastapi_app.py` exposes the repository's inference API, and `gradcam_resnet_lsl.py` implements the image-model and Grad-CAM explanation path used for reviewer inspection. The browser client in `app.js` submits images to that API and displays the returned prediction and visual evidence; the training scripts document how model artifacts are produced.
+`fastapi_app.py` implements the FastAPI application. `run_prediction` validates and converts the uploaded image, invokes the configured PAI and support detectors, filters findings to the dental region, de-duplicates localized boxes, calls `make_decision`, and creates annotated, heatmap, and side-by-side evidence images. `/api/predict` and `/predict` expose that structured result, while `/api/health` reports model availability.
 
-The implementation is clinical decision support, not an autonomous diagnostic or treatment system. Its output must preserve model/version context and image-quality limitations, and a qualified clinician must inspect the original radiograph and explanation before acting.
+`gradcam_resnet_lsl.py` implements `ResnetGradCam`, dental-region and periapical priors, heatmap overlay, and comparison-image generation. `app.js` submits images and renders the returned decision and artifacts. The implementation is clinical decision support, not an autonomous diagnosis or treatment system; a qualified clinician must inspect the original radiograph and explanation before acting.
